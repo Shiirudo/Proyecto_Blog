@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Grupo 11 - Blog{% endblock title %}
+{% block content %}
+Blog Página Principal
+
+{% for post in posts %}
+<a href="{% url 'blog:post-detail' slug=post.slug %}">
+{{ post.title}}
+{{ post.excerpt|truncatechars:50 }}
+</a>
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Grupo 11 - HomePage{% endblock title %}
+{% block content %}
+<a href="{% url 'home' %}">
+Página Principal
+</a>
+<a href="{% url 'blog:home' %}">
+    Blog
+</a>
+{% endblock content %}
